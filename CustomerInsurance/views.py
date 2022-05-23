@@ -68,7 +68,7 @@ class ProgressViewSet(viewsets.GenericViewSet):
     def list(self, request):
 
         try:
-            lis1=[]
+            lis1 = []
             import datetime
             data = Policy.objects.annotate(month=TruncMonth('date_of_purchase')).values('month').annotate(
                 dcount=Count('policy_id'))
