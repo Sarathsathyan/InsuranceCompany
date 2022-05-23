@@ -1,7 +1,10 @@
+# Django imports
 from django.urls import path, include
+# 3rd party imports
 from rest_framework import routers
 from rest_framework_simplejwt import views as jwt_views
 router = routers.SimpleRouter()
+
 from .views import PolicyViewSet, ProgressViewSet
 
 
